@@ -1,22 +1,230 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en" class="no-copy">
 <head>
-  <meta charset="UTF-8">
-  <title>Ссылки на Telegram</title>
-  <meta name="robots" content="noindex, nofollow">
-  <style>
-    body { font-family: sans-serif; background: #111; color: #eee; text-align: center; padding-top: 50px; }
-    a { display: block; margin: 10px 0; font-size: 20px; color: #00bfff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title"></title>
+    
+    <!-- Modern fonts connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Meta tags to prevent caching and indexing -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="robots" content="noindex, nofollow">
 </head>
-<body>
-  <h1>Наши Telegram-каналы</h1>
+<body class="no-copy">
+    <div class="container">
+        <header>
+            <div class="header-logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <h1 class="site-title"></h1>
+            <p class="site-subtitle"></p>
+            
+            <!-- Catalog search -->
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
 
-  <a href="https://t.me/kanal1">Канал 1</a>
-  <a href="https://t.me/kanal2">Канал 2</a>
-  <a href="https://t.me/kanal3">Канал 3</a>
+        <input type="radio" name="tabs" id="tab1" class="tab-input" checked>
+        <input type="radio" name="tabs" id="tab2" class="tab-input">
+        <input type="radio" name="tabs" id="tab3" class="tab-input">
+        <input type="radio" name="tabs" id="tab4" class="tab-input">
 
-  <p style="margin-top:50px; font-size:14px; color:#777;">Сайт не индексируется поисковиками</p>
+        <div class="tabs">
+            <label for="tab1" class="tab-label" data-tab="channels"></label>
+            <label for="tab2" class="tab-label" data-tab="shops"></label>
+            <label for="tab3" class="tab-label" data-tab="groups"></label>
+            <label for="tab4" class="tab-label" data-tab="private"></label>
+        </div>
+
+        <div id="content1" class="tab-content">
+            <div class="link-cards"></div>
+        </div>
+
+        <div id="content2" class="tab-content">
+            <div class="link-cards"></div>
+        </div>
+
+        <div id="content3" class="tab-content">
+            <div class="link-cards"></div>
+        </div>
+
+        <div id="content4" class="tab-content">
+            <div class="link-cards"></div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 id="footer-about-title"></h3>
+                    <p id="about-text"></p>
+                </div>
+                <div class="footer-section">
+                    <h3 id="footer-contacts-title"></h3>
+                    <div class="secure-contacts">
+                        <div class="contact-item">
+                            <i class="fas fa-comment-dots"></i> 
+                            <span class="contact-label" data-contact-type="jabber"></span>
+                            <span class="contact-value" data-full=""></span>
+                            <button class="copy-btn" onclick="copyContact(this)"><i class="fas fa-copy"></i></button>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span class="contact-label" data-contact-type="tox"></span>
+                            <span class="contact-value" data-full=""></span>
+                            <button class="copy-btn" onclick="copyContact(this)"><i class="fas fa-copy"></i></button>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-key"></i>
+                            <span class="contact-label" data-contact-type="pgp"></span>
+                            <span class="contact-value" data-full=""></span>
+                            <button class="copy-btn" onclick="copyContact(this)"><i class="fas fa-copy"></i></button>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-comment-alt"></i>
+                            <span class="contact-label" data-contact-type="matrix"></span>
+                            <span class="contact-value" data-full=""></span>
+                            <button class="copy-btn" onclick="copyContact(this)"><i class="fas fa-copy"></i></button>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-lock"></i>
+                            <span class="contact-label" data-contact-type="session"></span>
+                            <span class="contact-value" data-full=""></span>
+                            <button class="copy-btn" onclick="copyContact(this)"><i class="fas fa-copy"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 id="footer-forums-title"></h3>
+                    <div class="forums-list">
+                        <!-- Links will be added from config.json -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="footer-copyright"></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- "Back to top" button -->
+    <button id="back-to-top" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+    
+    <!-- Script for clipboard copying and content protection -->
+    <script>
+        // Text copy protection
+        document.addEventListener('DOMContentLoaded', function() {
+            // Disable context menu
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // Prevent text selection
+            document.addEventListener('selectstart', function(e) {
+                if (!e.target.classList.contains('contact-value') && 
+                    !e.target.id === 'search-input') {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            
+            // Prevent copying
+            document.addEventListener('copy', function(e) {
+                if (!e.target.classList.contains('contact-value')) {
+                    e.preventDefault();
+                    return false;
+                }
+            });
+            
+            // Prevent image dragging
+            document.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+                return false;
+            });
+            
+            // Prevent page saving
+            document.addEventListener('keydown', function(e) {
+                // Ctrl+S, Ctrl+U, F12
+                if ((e.ctrlKey && (e.keyCode === 83 || e.keyCode === 85)) || e.keyCode === 123) {
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Print Screen
+                if (e.keyCode === 44) {
+                    e.preventDefault();
+                    alert('Screenshots are prohibited!');
+                    return false;
+                }
+            });
+            
+            // Screenshot protection (experimental feature)
+            try {
+                if (navigator.mediaDevices && navigator.mediaDevices.getDisplayMedia) {
+                    navigator.mediaDevices.getDisplayMedia = function() {
+                        return new Promise((resolve, reject) => {
+                            reject(new Error('Screenshots are prohibited!'));
+                        });
+                    };
+                }
+            } catch (e) {
+                console.error('Error setting up screenshot protection:', e);
+            }
+        });
+        
+        // Function for copying contacts
+        function copyContact(button) {
+            const valueElement = button.previousElementSibling;
+            const fullValue = valueElement.getAttribute('data-full');
+            
+            if (fullValue) {
+                navigator.clipboard.writeText(fullValue)
+                    .then(() => {
+                        // Show a notification of successful copying
+                        const originalIcon = button.innerHTML;
+                        button.innerHTML = '<i class="fas fa-check"></i>';
+                        setTimeout(() => {
+                            button.innerHTML = originalIcon;
+                        }, 2000);
+                    })
+                    .catch(err => {
+                        console.error('Failed to copy text: ', err);
+                    });
+            }
+        }
+        
+        // Initialize "Back to top" button
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
