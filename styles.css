@@ -501,7 +501,7 @@ header::after {
 }
 
 .card-links a::after {
-    content: "в†’";
+    content: "→";
     margin-left: 5px;
     transition: all 0.3s ease;
 }
@@ -994,4 +994,59 @@ footer {
     font-size: 0.9rem;
     color: #888;
     position: relative;
-    background
+    background-color: var(--footer-bg);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, rgba(255, 51, 51, 0.5), transparent);
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 0 15px 20px;
+}
+
+.footer-section h3 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-color);
+}
+
+.footer-section p {
+    margin: 8px 0;
+    color: #aaa;
+}
+
+.footer-section i {
+    margin-right: 8px;
+    color: var(--accent-color);
+}
