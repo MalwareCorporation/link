@@ -463,3 +463,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     backToTopButton.classList.remove('visible');
                 }
+            });
+            
+            // Scroll to top on click
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    }
+});
