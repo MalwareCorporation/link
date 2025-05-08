@@ -1,8 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded, attempting to fetch config.json...');
     // Loading configuration file
     fetch('config.json')
-        .then(response => response.json())
+        .then(response => {
+            console.log('Fetch response status:', response.status);
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.json();
+        })
         .then(config => {
+            console.log('Config loaded successfully:', config);
             // Save config globally for use in other functions
             window.config = config;
             
@@ -10,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const pageTitle = document.getElementById('page-title');
             if (pageTitle) {
                 pageTitle.textContent = config.title;
+                console.log('Page title set to:', config.title);
             }
             
             // Set header and subtitle
@@ -144,7 +153,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 100);
             };
         })
-        .catch(error => console.error('Error loading configuration:', error));
+        .catch(error => {
+            console.error('Error loading configuration:', error);
+            // Display error on page for better visibility
+            document.body.innerHTML += `<div style="color: red; background: black; padding: 20px; margin: 20px; border: 2px solid red; position: fixed; top: 0; left: 0; z-index: 9999;">
+                <h2>Error loading configuration</h2>
+                <p>${error.message}</p>
+                <p>Check browser console for more details</p>
+            </div>`;
+        });
     
     // Function to update contact information
     function updateContactInfo(contactInfo) {
@@ -325,6 +342,15 @@ document.addEventListener('DOMContentLoaded', function() {
         function performSearch() {
             const searchTerm = searchInput.value.trim().toLowerCase();
             
+            // Remove any existing search indicators from tabs
+            document.querySelectorAll('.tab-label .search-count').forEach(el => el.remove());
+            
+            // Remove any existing search info
+            const existingInfo = document.querySelector('.search-info');
+            if (existingInfo) {
+                existingInfo.remove();
+            }
+            
             if (searchTerm === '') {
                 // If search field is empty, show all cards
                 document.querySelectorAll('.card').forEach(card => {
@@ -333,6 +359,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Remove search result messages
                 document.querySelectorAll('.no-results').forEach(el => el.remove());
+                
+                // Reset tab selection to first tab
+                document.getElementById('tab1').checked = true;
+                
                 return;
             }
             
@@ -353,9 +383,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 const contentId = card.closest('.tab-content').id;
                 
                 // Check if card contains search query
-                if (title.includes(searchTerm) || 
-                    description.includes(searchTerm) || 
-                    username.includes(searchTerm)) {
+                if (title.toLowerCase().includes(searchTerm) || 
+                    description.toLowerCase().includes(searchTerm) || 
+                    username.toLowerCase().includes(searchTerm)) {
                     card.style.display = 'flex';
                     foundCount[contentId]++;
                 } else {
@@ -379,17 +409,38 @@ document.addEventListener('DOMContentLoaded', function() {
                     existingNoResults.remove();
                 }
             }
+            
+            // Add search count indicators to tab labels
+            for (let i = 1; i <= 4; i++) {
+                if (foundCount[`content${i}`] > 0) {
+                    const tabLabel = document.querySelector(`.tab-label[for="tab${i}"]`);
+                    const searchCount = document.createElement('span');
+                    searchCount.className = 'search-count';
+                    searchCount.textContent = `(${foundCount[`content${i}`]})`;
+                    tabLabel.appendChild(searchCount);
+                }
+            }
+            
+            // Determine which tab to show based on search results
+            let tabToShow = null;
+            for (let i = 1; i <= 4; i++) {
+                if (foundCount[`content${i}`] > 0) {
+                    tabToShow = i;
+                    break;
+                }
+            }
+            
+            // If no results found in any tab, stay on current tab
+            // Otherwise switch to the first tab with results
+            if (tabToShow !== null) {
+                document.getElementById(`tab${tabToShow}`).checked = true;
+            }
         }
         
-        // Event handlers for search
+        // Event listeners
         searchButton.addEventListener('click', performSearch);
-        searchInput.addEventListener('keyup', function(e) {
-            if (e.key === 'Enter') {
-                performSearch();
-            } else if (e.key === 'Escape') {
-                searchInput.value = '';
-                performSearch();
-            } else if (searchInput.value.trim() === '') {
+        searchInput.addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
                 performSearch();
             }
         });
@@ -412,15 +463,3 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     backToTopButton.classList.remove('visible');
                 }
-            });
-            
-            // Scroll to top on click
-            backToTopButton.addEventListener('click', function() {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
-    }
-});
