@@ -132,6 +132,37 @@ document.addEventListener('DOMContentLoaded', function() {
             // Initialize "Back to top" button
             initBackToTopButton();
             
+            // Initialize "Subscribe to all channels" button
+            function initSubscribeAllButton() {
+                const subscribeAllButton = document.getElementById('subscribe-all');
+                const subscribeAllText = document.getElementById('subscribe-all-text');
+                
+                if (subscribeAllButton && window.config && window.config.texts && window.config.texts.buttons) {
+                    // Set button text from config
+                    if (subscribeAllText) {
+                        subscribeAllText.textContent = window.config.texts.buttons.subscribeAll || 'Subscribe to all channels';
+                    }
+                    
+                    // Set button title from config
+                    subscribeAllButton.title = window.config.texts.buttons.subscribeAllTitle || 'Subscribe to all channels';
+                    
+                    // Show button with delay (5 seconds)
+                    setTimeout(function() {
+                        subscribeAllButton.classList.add('visible');
+                    }, 5000);
+                    
+                    // Add click event handler
+                    subscribeAllButton.addEventListener('click', function() {
+                        // Get URL to Telegram folder from config
+                        const telegramFolderUrl = window.config.telegramFolder || 'https://t.me/';
+                        
+                        // Open link in new window/tab
+                        window.open(telegramFolderUrl, '_blank');
+                    });
+                }
+            }
+            initSubscribeAllButton();
+            
             // Handler for switching tabs programmatically
             window.switchToPrivateTab = function(cardId) {
                 // Activate private channels tab
