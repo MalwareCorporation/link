@@ -319,4 +319,89 @@
         },
         {
           "title": "C2 Frameworks Bot",
-          "description": "Full-access store for Red Team and post-exploitation software.\n\nWhat’s inside:\n• Cobalt Strike (cracked & custom builds)\n• Brute Ratel, Sliver, Mythic, Havoc, Manjusaka\n• Payload builders and post-exploitation kits\n• Source codes, plugins, and evasion configs\n• OPSEC too
+          "description": "Full-access store for Red Team and post-exploitation software.\n\nWhat’s inside:\n• Cobalt Strike (cracked & custom builds)\n• Brute Ratel, Sliver, Mythic, Havoc, Manjusaka\n• Payload builders and post-exploitation kits\n• Source codes, plugins, and evasion configs\n• OPSEC tools and EDR bypass techniques",
+          "logo": "c2logo.jpg",
+          "logoPlaceholder": "Shop",
+          "link": "https://t.me/C2FrameworksBot",
+          "username": "@C2FrameworksBot"
+        }
+      ]
+    },
+    {
+      "id": "groups",
+      "name": "Groups",
+      "items": [
+        {
+          "title": "Malware Forums",
+          "description": "The central hub that unites all chats, discussions, and topics across the Malware Corp ecosystem.\n\n• All categories in one place: stealers, drainers, crypters, RATs, C2 frameworks, exploits, Android/iOS malware, fake exchanges, and more\n• Each subject has its own dedicated topic\n• Community-driven discussions, support, updates, and knowledge exchange\n• Verified members only with active moderation\n\nOne chat. The entire underground.",
+          "logo": "mforumlogo.jpg",
+          "logoPlaceholder": "Group",
+          "link": "https://t.me/+31Yd7sUz8w1jMzRi",
+          "username": "@MalwareForums"
+        },
+        {
+          "title": "Crypt Service",
+          "description": "A dedicated chat for discussing crypters, stub cleaning, detection bypasses, and file protection.\n\n• Find crypter services (FUD, polymorphic, .NET, native, APK)\n• Discuss stub cleaning, code obfuscation, and AV evasion\n• Share methods, tools, and bypass techniques (WD, EDR, Cloud)\n• Request or offer crypter development and customization\n• Verified developers and clients only\n\nThe place for anyone working with encrypted payloads and stealth software.",
+          "logo": "cryptlogo.jpg",
+          "logoPlaceholder": "Group",
+          "link": "https://t.me/cryptservice",
+          "username": "@CryptService"
+        },
+        {
+          "title": "Reversers",
+          "description": "Reversing is an art, not a means to gain money.\n\nThis is the first Telegram community fully dedicated to software reverse engineering.\n\n• Share techniques, tools, and research\n• Discuss crackmes, unpacking, and anti-analysis\n• IDA, Ghidra, x64dbg, Frida, and more\n• Ideal for learners, hobbyists, and advanced REs\n• No leaks, no sales — just clean reversing talk",
+          "logo": "reverslogo.jpg",
+          "logoPlaceholder": "Group",
+          "link": "https://t.me/reversers",
+          "username": "@reversers"
+        },
+        {
+          "title": "Draining Service",
+          "description": "Group dedicated to drainer-related services, installation help, and partner offers.\n\n• Get help with setting up NFT & crypto drainers\n• Find or offer custom modifications and bypasses\n• Discuss landing pages, traffic, and funnel optimization\n• Share resources for multi-chain drainers (ETH, BNB, TRON, TON, etc.)\n• Verified developers, installers, and traffic sellers\n\nAll drainer work — in one place.",
+          "logo": "drainerlogo.jpg",
+          "logoPlaceholder": "Group",
+          "link": "https://t.me/DrainingService",
+          "username": "@DrainingService"
+        },
+        {
+          "title": "ChatGpt Jailbreaks",
+          "description": "Official discussion group of ChatGPTBypass — focused on jailbreaks, prompt injections, and bypass techniques.\n\n• Share and test jailbreak prompts\n• Discuss ways to bypass ChatGPT restrictions\n• Collaborate on custom prompt engineering\n• Explore ethical and technical aspects of AI manipulation\n• Open to researchers, enthusiasts, and bypass hunters\n\nPush the limits of AI — together.",
+          "logo": "jaillogo.jpg",
+          "logoPlaceholder": "Group",
+          "link": "https://t.me/GptJailbreaks",
+          "username": "@GptJailbreaks"
+        }
+      ]
+    },
+    {
+      "id": "private",
+      "name": "Private channels",
+      "items": [
+        {
+          "title": "Malware Elite",
+          "description": "Эксклюзивный приватный канал с премиум-контентом для профессионалов.\n\nЧто внутри:\n• Закрытые исходные коды коммерческих вредоносных программ\n• Эксклюзивные инструменты и билдеры\n• Приватные уязвимости и эксплойты\n• Доступ к закрытым базам данных\n\nТолько по приглашениям и после верификации.",
+          "logo": "elitelogo.jpg",
+          "logoPlaceholder": "Private",
+          "link": "https://t.me/MalwarePrivateBot?start=elite",
+          "username": "@MalwareElite"
+        },
+        {
+          "title": "Zero-Day Market",
+          "description": "Закрытый канал для торговли и обмена 0-day уязвимостями.\n\nЧто внутри:\n• Непубличные уязвимости в популярных продуктах\n• Эксплойты для Windows, Linux, macOS, iOS, Android\n• Уязвимости в браузерах и плагинах\n• Обход двухфакторной аутентификации\n\nСтрогая верификация участников.",
+          "logo": "0daylogo.jpg",
+          "logoPlaceholder": "Private",
+          "link": "https://t.me/MalwarePrivateBot?start=zeroday",
+          "username": "@ZeroDayMarket"
+        },
+        {
+          "title": "APT Techniques",
+          "description": "Канал с техниками и инструментами, используемыми APT группами.\n\nЧто внутри:\n• Анализ методов работы известных APT групп\n• Инструменты для имитации APT атак\n• Техники персистентности и скрытого присутствия\n• Методы обхода современных средств защиты\n\nТолько для проверенных специалистов.",
+          "logo": "aptlogo.jpg",
+          "logoPlaceholder": "Private",
+          "link": "https://t.me/MalwarePrivateBot?start=apt",
+          "username": "@APTTechniques"
+        }
+      ]
+    }
+  ]
+}
