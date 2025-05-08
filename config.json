@@ -1,0 +1,355 @@
+{
+  "title": "MALWARE CORPORATION",
+  "subtitle": "This adapter serves as the hub for the entire malware forum ecosystem",
+  "footer": " 2025 MALWARE CORPORATION | LINKS TO THE PROJECT IN THE TELEGRAM ECOSYSTEM",
+  "logoPath": "logo/",
+  "defaultLogo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+  "aboutText": "We are a closed project for developers, researchers, and specialists working with malware, exploits, info-stealers, drainers, fake platforms, bots, and anonymous schemes.\nOur tools and code are regularly used in private and commercial setups worldwide.\n\nMalware Corp is not just a project. It's a tool. It's a network. It's a system.\nJoin while you still can.",
+  "texts": {
+    "search": "Search...",
+    "tabs": {
+      "channels": "Channels",
+      "shops": "Markets",
+      "groups": "Groups",
+      "private": "Private channels"
+    },
+    "footer": {
+      "about": "ABOUT THE CATALOG",
+      "contacts": "CONTACTS",
+      "forums": "WE ARE IN FORUMS",
+      "contactLabels": {
+        "jabber": "Jabber/XMPP:",
+        "tox": "Tox ID:",
+        "pgp": "PGP:",
+        "matrix": "Matrix:",
+        "session": "Session ID:"
+      }
+    },
+    "buttons": {
+      "private": "Private",
+      "backToTop": "To the top",
+      "copy": "Copy"
+    }
+  },
+  "contactInfo": {
+    "jabber": "malwar@thesecure.biz",
+    "tox": "4927545A5F570398E794AC23139E37598F592CA71F868AD313294E33D3E7875E701E73E01234",
+    "pgp": "deleted",
+    "matrix": "deleted",
+    "session": "deleted"
+  },
+  "externalLinks": [
+    {
+      "name": "LOLZTEAM",
+      "url": "https://lolz.guru/",
+      "icon": "fas fa-users"
+    },
+    {
+      "name": "Antichat",
+      "url": "https://forum.antichat.ru/",
+      "icon": "fas fa-shield-alt"
+    },
+    {
+      "name": "Zelenka",
+      "url": "https://zelenka.guru/",
+      "icon": "fas fa-leaf"
+    },
+    {
+      "name": "XSS",
+      "url": "https://xss.is/",
+      "icon": "fas fa-code"
+    },
+    {
+      "name": "BHF",
+      "url": "https://bhf.io/",
+      "icon": "fas fa-user-secret"
+    },
+    {
+      "name": "DarkForum",
+      "url": "https://darkforum.ru/",
+      "icon": "fas fa-moon"
+    },
+    {
+      "name": "RuTracker",
+      "url": "https://rutracker.org/",
+      "icon": "fas fa-download"
+    },
+    {
+      "name": "Exploit",
+      "url": "https://exploit.in/",
+      "icon": "fas fa-bug"
+    },
+    {
+      "name": "WWH-Club",
+      "url": "https://wwh-club.net/",
+      "icon": "fas fa-globe"
+    },
+    {
+      "name": "Bits.Media",
+      "url": "https://forum.bits.media/",
+      "icon": "fas fa-bitcoin"
+    }
+  ],
+  "categories": [
+    {
+      "id": "channels",
+      "name": "Channels",
+      "items": [
+        {
+          "title": "Malware Corporation",
+          "description": "A public gateway into the world of advanced malware development and cyber tooling.\n\nHere you'll find:\n• Insights into stealers, RATs, clippers, and more\n• Source leaks, builder breakdowns, and tool showcases\n• Research-driven content on exploits, distribution, and persistence\n• Educational drops for red teamers and cybersecurity pros\n\nFollow to stay connected with the pulse of the underground.",
+          "logo": "mcorplogo.jpg",
+          "logoPlaceholder": "TG",
+          "link": "https://t.me/+WiWdjI1Z1-RiZjQy",
+          "username": "@MalwareCorp",
+          "privateChannel": {
+            "link": "https://t.me/MalwarePrivateBot?start=ctgr_75947",
+            "username": "@MalwareCorpPrivate"
+          }
+        },
+        {
+          "title": "Crack Cloud",
+          "description": "Unlock a curated stream of cracked tools, source leaks, and security resources.\n\nInside:\n• Black Hat & White Hat utilities\n• Scanners, inviters, spammers, checkers\n• Reverse engineering & pentesting guides\n• And more for your offensive security toolkit\n\nStay updated — stay ahead.",
+          "logo": "crackcloudlogo.jpg",
+          "logoPlaceholder": "TG",
+          "link": "https://t.me/+-s6ABR81wv41ODFi",
+          "username": "@CrackCloud",
+          "privateChannel": {
+            "link": "https://t.me/MalwarePrivateBot?start=ctgr_75950",
+            "username": "@CrackCloudPrivate"
+          }
+        },
+        {
+          "title": "Ransomware Team",
+          "description": "A curated space for professionals researching and developing ransomware technologies.\n\nInside you'll find:\n• Builders & source codes for Windows and cross-platform ransomware\n• Cracked & custom ransomware variants with updates\n• Pentesting guides focused on Windows vulnerability exploitation\n• Distribution tactics, private builds, and exclusive tools\n• And more resources tailored to the ransomware domain\n\nSubscribe to explore the depths of offensive security.",
+          "logo": "ransomlogo.jpg",
+          "logoPlaceholder": "TG",
+          "link": "https://t.me/+vVfuVB0-LpNmMjk0",
+          "username": "@RansomTeam",
+          "privateChannel": {
+            "link": "https://t.me/MalwarePrivateBot?start=ctgr_75965",
+            "username": "@RansomPrivate"
+          }
+        },
+        {
+          "title": "Название канала 4",
+          "description": "Краткое описание канала и его тематики. Здесь можно указать, о чем этот канал и почему он интересен.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "TG",
+          "link": "https://t.me/channel4",
+          "username": "@channel4",
+          "privateChannel": {
+            "link": "https://t.me/private4",
+            "username": "@private4"
+          }
+        },
+        {
+          "title": "Название канала 5",
+          "description": "Краткое описание канала и его тематики. Здесь можно указать, о чем этот канал и почему он интересен.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "TG",
+          "link": "https://t.me/channel5",
+          "username": "@channel5",
+          "privateChannel": {
+            "link": "https://t.me/private_channel5",
+            "username": "@private_channel5"
+          }
+        },
+        {
+          "title": "Название канала 6",
+          "description": "Краткое описание канала и его тематики. Здесь можно указать, о чем этот канал и почему он интересен.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "TG",
+          "link": "https://t.me/channel6",
+          "username": "@channel6",
+          "privateChannel": {
+            "link": "https://t.me/private_channel6",
+            "username": "@private_channel6"
+          }
+        },
+        {
+          "title": "Название канала 1",
+          "description": "Краткое описание каналаКраткое описание канала и его тематики. Здесь Краткое описание канала и его тематики. Здесь описание канала и его тематики. Здесьи его тематики. Здесь можно указать, о чем этот канал и почему он интересен.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "TG",
+          "link": "https://t.me/channel1",
+          "username": "@channel1",
+          "privateChannel": {
+            "link": "https://t.me/private1",
+            "username": "@private1"
+          }
+        },
+        {
+          "title": "Название канала 2",
+          "description": "Краткое описание канала и его тематики. Здесь можно указать, о чем этот канал и почему он интересен.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "TG",
+          "link": "https://t.me/channel2",
+          "username": "@channel2",
+          "privateChannel": {
+            "link": "https://t.me/private2",
+            "username": "@private2"
+          }
+        },
+        {
+          "title": "Название канала 3",
+          "description": "Краткое описание канала и его тематики. Здесь можно указать, о чем этот канал и почему он интересен.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "TG",
+          "link": "https://t.me/channel3",
+          "username": "@channel3",
+          "privateChannel": {
+            "link": "https://t.me/private3",
+            "username": "@private3"
+          }
+        },
+        {
+          "title": "Название канала 4",
+          "description": "Краткое описание канала и его тематики. Здесь можно указать, о чем этот канал и почему он интересен.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "TG",
+          "link": "https://t.me/channel4",
+          "username": "@channel4",
+          "privateChannel": {
+            "link": "https://t.me/private4",
+            "username": "@private4"
+          }
+        },
+        {
+          "title": "Название канала 5",
+          "description": "Краткое описание канала и его тематики. Здесь можно указать, о чем этот канал и почему он интересен.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "TG",
+          "link": "https://t.me/channel5",
+          "username": "@channel5",
+          "privateChannel": {
+            "link": "https://t.me/private_channel5",
+            "username": "@private_channel5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shops",
+      "name": "Магазины",
+      "items": [
+        {
+          "title": "Название магазина 1",
+          "description": "Описание магазина, что продает, особенности. Информация о товарах и услугах.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "Shop",
+          "link": "https://t.me/shop1",
+          "username": "@shop1"
+        },
+        {
+          "title": "Название магазина 2",
+          "description": "Описание магазина, что продает, особенности. Информация о товарах и услугах.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "Shop",
+          "link": "https://t.me/shop2",
+          "username": "@shop2"
+        },
+        {
+          "title": "Название магазина 3",
+          "description": "Описание магазина, что продает, особенности. Информация о товарах и услугах.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "Shop",
+          "link": "https://t.me/shop3",
+          "username": "@shop3"
+        },
+        {
+          "title": "Название магазина 4",
+          "description": "Описание магазина, что продает, особенности. Информация о товарах и услугах.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "Shop",
+          "link": "https://t.me/shop4",
+          "username": "@shop4"
+        }
+      ]
+    },
+    {
+      "id": "groups",
+      "name": "Группы",
+      "items": [
+        {
+          "title": "Название группы 1",
+          "description": "Описание группы, тематика обсуждений, активность участников и другая полезная информация.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "Group",
+          "link": "https://t.me/group1",
+          "username": "@group1"
+        },
+        {
+          "title": "Название группы 2",
+          "description": "Описание группы, тематика обсуждений, активность участников и другая полезная информация.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "Group",
+          "link": "https://t.me/group2",
+          "username": "@group2"
+        },
+        {
+          "title": "Название группы 3",
+          "description": "Описание группы, тематика обсуждений, активность участников и другая полезная информация.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "Group",
+          "link": "https://t.me/group3",
+          "username": "@group3"
+        },
+        {
+          "title": "Название группы 4",
+          "description": "Описание группы, тематика обсуждений, активность участников и другая полезная информация.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "Group",
+          "link": "https://t.me/group4",
+          "username": "@group4"
+        },
+        {
+          "title": "Название группы 5",
+          "description": "Описание группы, тематика обсуждений, активность участников и другая полезная информация.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "Group",
+          "link": "https://t.me/group5",
+          "username": "@group5"
+        }
+      ]
+    },
+    {
+      "id": "private",
+      "name": "Private Channels",
+      "items": [
+        {
+          "title": "Приват канал 1",
+          "description": "Описание приватного канала, его особенности, условия доступа и другая важная информация.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "Private",
+          "link": "https://t.me/MalwarePrivateBot?start=ctgr_75947",
+           "username": "MalwareCorp Private"
+        },
+        {
+          "title": "Приват канал 2",
+          "description": "Описание приватного канала, его особенности, условия доступа и другая важная информация.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "Private",
+          "link": "https://t.me/private2",
+          "username": "@private2"
+        },
+        {
+          "title": "Приват канал 3",
+          "description": "Описание приватного канала, его особенности, условия доступа и другая важная информация.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "Private",
+          "link": "https://t.me/private3",
+          "username": "@private3"
+        },
+        {
+          "title": "Приват канал 4",
+          "description": "Описание приватного канала, его особенности, условия доступа и другая важная информация.",
+          "logo": "bba9941d8f335b003a5166820fef0aa1.jpg",
+          "logoPlaceholder": "Private",
+          "link": "https://t.me/private4",
+          "username": "@private4"
+        }
+      ]
+    }
+  ]
+        }
