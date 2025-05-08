@@ -581,58 +581,47 @@ header::after {
 
 /* Adaptivity for mobile devices */
 @media (max-width: 768px) {
-    .tabs {
-        justify-content: center;
-        width: 100%;
-        padding: 0;
-        margin: 20px 0;
-    }
-    
-    .tab-label {
-        text-align: center;
-        padding: 10px 15px;
-        margin: 0 2px 5px;
-        font-size: 0.9rem;
-        width: calc(50% - 10px); /* Make 2 tabs per row */
-        box-sizing: border-box;
-    }
-    
-    .tab-content {
-        padding: 15px 5px;
-    }
-    
-    .private-btn {
-        font-size: 0.8rem;
-        padding: 8px 12px;
-    }
-    
-    .private-btn svg {
-        width: 12px;
-        height: 12px;
-    }
-    
     .container {
         padding: 10px;
     }
     
     .site-title {
-        font-size: 2.2rem;
-    }
-    
-    .site-subtitle {
-        font-size: 0.9rem;
+        font-size: 1.8rem;
     }
     
     .search-container {
-        max-width: 100%;
+        max-width: 90%;
+    }
+    
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+    
+    .tab-label {
+        margin-bottom: 5px;
+        width: 100%;
+        text-align: center;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    
+    .tab-content {
+        padding: 10px 5px;
+    }
+    
+    .link-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
     
     .card {
-        margin-bottom: 15px;
+        padding: 12px;
     }
     
     .card-header {
-        margin-bottom: 8px;
+        flex-direction: row;
     }
     
     .card-logo {
@@ -662,184 +651,41 @@ header::after {
     }
 }
 
-/* Improved footer */
-footer {
-    margin-top: 50px;
-    padding: 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 0.9rem;
-    color: #888;
-    position: relative;
-    background-color: var(--footer-bg);
+/* Search indicators in tabs */
+.search-info {
+    background-color: rgba(17, 17, 17, 0.7);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    overflow: hidden;
-}
-
-footer::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 3px;
-    background: linear-gradient(to right, transparent, rgba(255, 51, 51, 0.5), transparent);
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 30px 20px;
-}
-
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    margin: 0 15px 20px;
-}
-
-.footer-section h3 {
-    color: var(--accent-color);
     margin-bottom: 15px;
-    font-size: 1.1rem;
-    position: relative;
-    padding-bottom: 10px;
-}
-
-.footer-section h3::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 50px;
-    height: 2px;
-    background-color: var(--accent-color);
-}
-
-.footer-section p {
-    margin: 8px 0;
-    color: #aaa;
-}
-
-.footer-section i {
-    margin-right: 8px;
-    color: var(--accent-color);
-}
-
-/* Styles for secure contacts */
-.secure-contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    padding: 8px 10px;
-    background-color: var(--secure-contact-bg);
-    border-radius: 4px;
-    color: #aaa;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-    border-left: 2px solid transparent;
-    position: relative;
-    flex-wrap: wrap;
-}
-
-.contact-item:hover {
-    background-color: var(--secure-contact-hover);
-    color: var(--text-color);
-    border-left: 2px solid var(--accent-color);
-}
-
-.contact-item i {
-    margin-right: 10px;
-    font-size: 1rem;
-    color: var(--accent-color);
-    transition: all 0.3s ease;
-    width: 20px;
+    padding: 10px;
     text-align: center;
-}
-
-.contact-item:hover i {
-    transform: scale(1.2);
-}
-
-.contact-label {
-    font-weight: 500;
-    margin-right: 5px;
-    color: #bbb;
-    white-space: nowrap;
-}
-
-.contact-value {
+    font-size: 0.9rem;
     color: var(--accent-color);
-    margin-right: 8px;
-    flex-grow: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    backdrop-filter: blur(5px);
+    animation: fadeIn 0.3s ease;
 }
 
-.copy-btn {
-    background: transparent;
-    border: none;
-    color: #777;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 3px;
-    font-size: 0.85rem;
-    transition: all 0.2s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.copy-btn:hover {
-    color: var(--accent-color);
-    background-color: rgba(255, 51, 51, 0.1);
-}
-
-.copy-btn.copied {
-    background-color: rgba(0, 180, 0, 0.2);
-    color: #4caf50;
-}
-
-.copy-btn.copied i::before {
-    content: "\f00c"; /* Checkmark icon */
+.search-count {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 0.8rem;
+    margin-left: 5px;
+    animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.2); }
-    100% { transform: scale(1); }
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
 }
 
-.copy-btn.copied i {
-    animation: pulse 0.5s ease-in-out;
-}
-
-.copy-tooltip {
-    position: absolute;
-    right: 10px;
-    font-size: 0.8rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #aaa;
-    padding: 2px 6px;
-    border-radius: 3px;
-    opacity: 0;
-    transition: all 0.2s ease;
-}
-
-.contact-item:hover .copy-tooltip {
-    opacity: 0.7;
-}
-
-.copy-tooltip.visible {
-    opacity: 1;
-    color: var(--accent-color);
+/* Remove old search summary styles that are no longer needed */
+.search-summary,
+.tab-links {
+    display: none;
 }
 
 /* Styles for forums list */
@@ -995,4 +841,157 @@ footer::before {
     }
     
     .card-header {
-        flex-direction: r
+        flex-direction: row;
+    }
+    
+    .card-logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+    
+    .card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-section {
+        margin: 0 0 20px;
+        width: 100%;
+    }
+    
+    #back-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Styles for secure contacts */
+.secure-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: var(--secure-contact-bg);
+    border-radius: 4px;
+    color: #aaa;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    border-left: 2px solid transparent;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.contact-item:hover {
+    background-color: var(--secure-contact-hover);
+    color: var(--text-color);
+    border-left: 2px solid var(--accent-color);
+}
+
+.contact-item i {
+    margin-right: 10px;
+    font-size: 1rem;
+    color: var(--accent-color);
+    transition: all 0.3s ease;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-item:hover i {
+    transform: scale(1.2);
+}
+
+.contact-label {
+    font-weight: 500;
+    margin-right: 5px;
+    color: #bbb;
+    white-space: nowrap;
+}
+
+.contact-value {
+    color: var(--accent-color);
+    margin-right: 8px;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.copy-btn {
+    background: transparent;
+    border: none;
+    color: #777;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copy-btn:hover {
+    color: var(--accent-color);
+    background-color: rgba(255, 51, 51, 0.1);
+}
+
+.copy-btn.copied {
+    background-color: rgba(0, 180, 0, 0.2);
+    color: #4caf50;
+}
+
+.copy-btn.copied i::before {
+    content: "\f00c"; /* Checkmark icon */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.copy-btn.copied i {
+    animation: pulse 0.5s ease-in-out;
+}
+
+.copy-tooltip {
+    position: absolute;
+    right: 10px;
+    font-size: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #aaa;
+    padding: 2px 6px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.contact-item:hover .copy-tooltip {
+    opacity: 0.7;
+}
+
+.copy-tooltip.visible {
+    opacity: 1;
+    color: var(--accent-color);
+}
+
+/* Improved footer */
+footer {
+    margin-top: 50px;
+    padding: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: #888;
+    position: relative;
+    background
